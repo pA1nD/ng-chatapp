@@ -2,34 +2,33 @@
 
 <body>
 <div class="chatbox">
-<div class="chatlogs">
+<div class="chatlogs" [innerHtml]="chatMessage2">
 
-  <div class="chat friend">
+  <!-- <div class="chat friend">
       <div class="user-photo">    </div>
 
         <p class="chat-message">
             Hello!
         </p>
-  </div>
-
-  <div class="chat self">
+  </div> -->
+  
+  <!-- <div class="chat self">
       <div class="user-photo"></div>
-
         <p class="chat-message">
-            Hi there!
+            {{chatMessage2}}
         </p>
-
-  </div>
+  </div> -->
 </div>
 
 
-<form target="_self chatlogs">
+<div target="_self chatlogs">
 <div class="chat-form">
 
-  <textarea></textarea>
-  <button type="submit">Send</button>
+
+  <textarea [(ngModel)]="chatMessage" (keyup.enter)="addMessage(chatMessage)" class="form-control" rows="2" placeholder="type here"></textarea>
+  <button (click)="addMessage(chatMessage)" [disabled]="!chatMessage" class="btn btn-primary">submit</button>
 </div>
-</form>
+</div>
 
 
 </div>
