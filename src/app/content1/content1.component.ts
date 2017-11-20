@@ -7,22 +7,25 @@ import { Component, Input, OnInit } from '@angular/core'
 })
 export class Content1Component implements OnInit {
   @Input() chatMessage: string
-  @Input() chatMessage2: string
+
+  // Wir führen zwei public Properties ein: `name` (string) und `chatArray` (array mit strings)
+  public name: string = ''
+  public chatArray: Array<String> = []
 
   constructor() {}
 
-  ngOnInit() {}
-  public addMessage(message: string): void {
-    // alert(message)
+  // Beim initialen Aufruf der Seite:
+  ngOnInit() {
+    // Wir zeigen ein Prompt (pop-up) und weisen den Input an `name` zu
+    this.name = prompt('Halt. Stop. Wie heisst du?')
+  }
 
+  // Jedesmal, wenn "Senden" gedrückt wird:
+  public addMessage(message: string): void {
+    // Textfeld zurücksetzen
     this.chatMessage = ''
-    this.chatMessage2 =
-      `
-    <div class="chat self">
-          <div class="user-photo"></div>
-            <p class="chat-message">` +
-      message +
-      `</p>
-      </div>`
+
+    // Jede neue Nachricht wird an die Liste `chatArray` angehängt
+    this.chatArray.push(message)
   }
 }
