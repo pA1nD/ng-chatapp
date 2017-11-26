@@ -12,6 +12,7 @@ export class Content1Component implements OnInit {
   public name: string = ''
   public time= new Date().getTime()
   public chatArray: Array<String> = []
+  
 
   constructor() {}
 

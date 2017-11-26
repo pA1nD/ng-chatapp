@@ -2,8 +2,9 @@ hr {
     width: 100%;
     height: 5px;
     margin: 0 auto;
-    color: #00802F;
-    background: #00802F;
+    color: #054F43;
+    background: #054F43;
+
 }
 
 
@@ -11,9 +12,17 @@ hr {
 
 h1
 {
-  text-shadow: 2px 1px grey;
+  text-shadow: 2px 1px black;
   text-align: center;
+  
+  color: 	#F0F8FF;
 
+}
+.logo {
 
+  height: 10%;
+  align: center;
+  padding-left: 30%;
+  padding-top: 10px;
 
 }
