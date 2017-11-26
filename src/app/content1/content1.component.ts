@@ -10,6 +10,7 @@ export class Content1Component implements OnInit {
 
   // Wir führen zwei public Properties ein: `name` (string) und `chatArray` (array mit strings)
   public name: string = ''
+  public time= new Date().getTime()
   public chatArray: Array<String> = []
 
   constructor() {}
@@ -27,5 +28,9 @@ export class Content1Component implements OnInit {
 
     // Jede neue Nachricht wird an die Liste `chatArray` angehängt
     this.chatArray.push(message)
+
+
   }
+
+
 }

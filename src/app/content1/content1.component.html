@@ -1,15 +1,16 @@
 <body>
   <div class="chatbox">
     <div class="chatlogs">
-      
+
       <div class="chat self">
           <div class="user-photo"></div>
-          <p class="chat-message"> 
+          <p class="chat-message">
             <strong>Bot</strong><br />
             <span>Hallo {{name}}!</span>
+
           </p>
       </div>
-      
+
       <!--
       `let msg of chatArray` does the magic.
       chatArray ist eine List mit allen Nachrichten.
@@ -21,9 +22,12 @@
         <div class="user-photo"></div>
         <p class="chat-message">
           <strong>{{name}}</strong><br />
-          <span> {{msg}}</span> </p>
+          <span> {{msg}}
+          <p class= "time">{{time |date: 'h:m d-M-yy' }} </p>
+           </span>
+        </p>
       </div>
-      
+
     </div>
 
     <div target="_self chatlogs">

@@ -66,6 +66,8 @@ box-shadow: 0 3px #ccc;
 .friend .chat-message{
      background: #E6EAEB;
 }
+
+
 .self .chat-message{
       background: #A7F0F9;
       order: -1;
