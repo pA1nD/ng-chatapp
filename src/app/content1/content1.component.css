@@ -62,6 +62,19 @@ box-shadow: 0 3px #ccc;
 
    font:14px arial;
 }
+.chat .chat-message .text {
+  color: black;
+}
+
+.chat .chat-message .time{
+  color: grey;
+  font-size: 70%;
+  text-align: right;
+
+
+}
+
+
 
 .friend .chat-message{
      background: #E6EAEB;
