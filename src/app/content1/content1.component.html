@@ -20,12 +20,13 @@
       -->
       <div class="chat friend" *ngFor="let msg of chatArray">
         <div class="user-photo"></div>
-        <p class="chat-message">
-          <strong>{{name}}</strong><br />
-          <span > <p class= "text"> {{msg}}  </p> <br />
-          <p class= "time">{{time |date: 'hh:mm dd-MM-yy' }} </p>
-          </span>
-        </p>
+        <div class="chat-message">
+          <strong>{{name}}</strong>
+          <span style="float: right;" class= "time">{{time |date: 'hh:mm dd-MM-yy' }} </span>
+          <br />
+          <p class= "text" style="word-wrap:break-word;"> {{msg}}  </p> <br />
+
+        </div>
       </div>
 
     </div>
