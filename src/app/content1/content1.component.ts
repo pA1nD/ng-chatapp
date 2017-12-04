@@ -27,14 +27,12 @@ export class Content1Component implements OnInit {
       this.name = prompt('Halt. Stop. Wie heisst du?')
     }
 
+    // THIS will read the data from the server. (only initial)
     this.http
       .get<any[]>('https://immense-refuge-35508.herokuapp.com/history')
       .subscribe(data => {
-        // Read the result field from the JSON response.
-        // this.results = data
+        // Read the result field from the JSON response and merge them with chatArray into chatArray. (chatArray + data = chatArray)
         this.chatArray = [...this.chatArray, ...data]
-        console.log(data)
-        // console.log(this.chatArray)
       })
   }
 
@@ -46,6 +44,7 @@ export class Content1Component implements OnInit {
     // Jede neue Nachricht wird an die Liste `chatArray` angehängt
     this.chatArray.push(message)
 
+    // THIS will send the message to the server.
     const body = { message: message, nickname: this.name }
     this.http
       .post('https://immense-refuge-35508.herokuapp.com/history', body)
