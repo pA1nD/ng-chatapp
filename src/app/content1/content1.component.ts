@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core'
+import { HttpClient } from '@angular/common/http'
 
 @Component({
   selector: 'app-content1',
@@ -11,17 +12,30 @@ export class Content1Component implements OnInit {
   // Wir führen zwei public Properties ein: `name` (string) und `chatArray` (array mit strings)
   public name: string = ''
   public time = new Date().getTime()
-  public chatArray: Array<String> = []
+  public chatArray: Array<any> = []
+  // public results = []
+  results: Object
 
-  constructor() {}
+  // Inject HttpClient into your component or service.
+  constructor(private http: HttpClient) {}
 
   // Beim initialen Aufruf der Seite:
-  ngOnInit() {
+  ngOnInit(): void {
     // Wir zeigen ein Prompt (pop-up) und weisen den Input an `name` zu
     // Neu: Bis er einen Namen eingibt.
     while (this.name == '' || this.name == null) {
       this.name = prompt('Halt. Stop. Wie heisst du?')
     }
+
+    this.http
+      .get<any[]>('https://immense-refuge-35508.herokuapp.com/history')
+      .subscribe(data => {
+        // Read the result field from the JSON response.
+        // this.results = data
+        this.chatArray = [...this.chatArray, ...data]
+        console.log(data)
+        // console.log(this.chatArray)
+      })
   }
 
   // Jedesmal, wenn "Senden" gedrückt wird:
@@ -31,5 +45,10 @@ export class Content1Component implements OnInit {
 
     // Jede neue Nachricht wird an die Liste `chatArray` angehängt
     this.chatArray.push(message)
+
+    const body = { message: message, nickname: this.name }
+    this.http
+      .post('https://immense-refuge-35508.herokuapp.com/history', body)
+      .subscribe()
   }
 }
