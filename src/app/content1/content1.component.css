@@ -71,7 +71,6 @@ box-shadow: 0 3px #ccc;
   font-size: 70%;
   text-align: right;
 
-
 }
 
 
@@ -127,4 +126,5 @@ box-shadow: 0 3px #ccc;
 
 .chat-form button:hover {
   background: #A09F9F;
+  color: #ffffff;
 }

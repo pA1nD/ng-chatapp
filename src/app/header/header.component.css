@@ -1,6 +1,6 @@
 hr {
     width: 100%;
-    height: 5px;
+    height: 50px;
     margin: 0 auto;
     color: #054F43;
     background: #054F43;
@@ -8,21 +8,25 @@ hr {
 }
 
 
-
-
 h1
 {
   text-shadow: 2px 1px black;
   text-align: center;
-  
+  font-size: 25px;
   color: 	#F0F8FF;
+  padding-bottom: 8px;
+
 
 }
 .logo {
 
-  height: 10%;
-  align: center;
-  padding-left: 30%;
-  padding-top: 10px;
+  height: 40%;
+display: block;
+margin: 0 auto;
+padding-top: 8px;
+padding-bottom: 0px;
+}
 
+header{
+  height: 90px
 }
