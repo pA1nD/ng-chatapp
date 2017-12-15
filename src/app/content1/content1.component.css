@@ -6,17 +6,17 @@
 }
 
 body {
-  background-color: #F1F3F2
+  background-color: #E6E6E6
 }
 
 
 .chatbox{
-width: 400px;
-min-width: 390px;
+max-width: 50%;
+min-width: 360px;
 height: 600px;
-background: #054F43;
-padding:25px;
-margin: 20px auto;
+background: #0B243B;
+padding:5px;
+margin: 5px auto;
 box-shadow: 0 3px #ccc;
 }
 
@@ -94,22 +94,23 @@ box-shadow: 0 3px #ccc;
   margin-top: 10px;
   display: flex;
   align-items: flex-start;
+
 }
 .chat-form textarea{
   width: 90%;
   height: 40px;
-  border: 2px solid #eee;
+  border: 2px solid #070B19;
   border-radius: 3px;
   resize: none;
   padding: 10px;
-  background: #FBFBFB;
+  background: #071918;
   font-size: 14px ;
-  color: #333;
+  color: #F7F8E0;
   font-style: normal;
 }
 
 .chat-form textarea: focus{
-  background: #fff;
+  background: #070B19;
 
 }
 

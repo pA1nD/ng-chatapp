@@ -2,6 +2,12 @@ hr {
     width: 100%;
     height: 5px;
     margin: 0 auto;
-    color: #00802F;
-    background: #00802F;
+    background: #b0E0E6;
+}
+
+.copyright {
+  font-size: 14px;
+  color: grey;
+  padding-right: 5%;
+
 }
