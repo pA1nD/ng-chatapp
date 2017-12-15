@@ -62,9 +62,6 @@ box-shadow: 0 3px #ccc;
 
    font:14px arial;
 }
-.chat .chat-message .text {
-  color: black;
-}
 
 .chat .chat-message .time{
   color: grey;
@@ -77,8 +74,15 @@ box-shadow: 0 3px #ccc;
 
 .friend .chat-message{
      background: #E6EAEB;
+     order: 1;
+
 }
 
+
+.welcome .chat-message{
+      background: #A7F0F9;
+      order: -1;
+}
 
 .self .chat-message{
       background: #A7F0F9;
