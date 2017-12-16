@@ -19,20 +19,6 @@ bekommen wir die jeweilige Nachricht in der Variable `msg`.
       </div>
 
 
-      <div class="chat friend" *ngFor="let msg of chatArray">
-        <div class="user-photo"></div>
-        <div class="chat-message">
-          <strong *ngIf="msg.nickname != null">{{msg.nickname}}</strong>
-
-          <span style="float: right;" class= "time">{{msg.date}} </span>
-          <br />
-
-          <p  style="word-wrap:break-word;" *ngIf="msg.nickname != null"> {{msg.message}}  </p>
-          <br />
-        </div>
-    </div>
-
-
       <div class= "chat self" *ngFor="let msg of chatArray">
         <div class="user-photo"></div>
         <div class="chat-message">
@@ -45,7 +31,19 @@ bekommen wir die jeweilige Nachricht in der Variable `msg`.
           <br />
         </div>
       </div>
+      
+      <div class="chat friend" *ngFor="let msg of chatArray">
+        <div class="user-photo"></div>
+        <div class="chat-message">
+          <strong *ngIf="msg.nickname != null">{{msg.nickname}}</strong>
 
+          <span style="float: right;" class= "time">{{msg.date}} </span>
+          <br />
+
+          <p  style="word-wrap:break-word;" *ngIf="msg.nickname != null"> {{msg.message}}  </p>
+          <br />
+        </div>
+    </div>
 
     </div>
 
