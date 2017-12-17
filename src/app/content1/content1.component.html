@@ -10,32 +10,44 @@ bekommen wir die jeweilige Nachricht in der Variable `msg`.
   <div class="chatbox">
     <div class="chatlogs">
 
-      <div class="chat self">
+      <div class="chat welcome">
           <div class="user-photo"></div>
           <p class="chat-message">
             <strong>Bot</strong><br />
             <span>Hallo {{name}}!</span>
-
           </p>
       </div>
 
 
+      <div class= "chat self" *ngFor="let msg of chatArray">
+        <div class="user-photo"></div>
+        <div class="chat-message">
+          <strong *ngIf="msg.nickname == null">{{name}}</strong>
+          <span style="float: right;" class= "time">{{msg.date}} </span>
+          <br />
+
+          <p  style="word-wrap:break-word;" *ngIf="msg.nickname == null"> {{msg}}  </p>
+
+          <br />
+        </div>
+      </div>
+      
       <div class="chat friend" *ngFor="let msg of chatArray">
         <div class="user-photo"></div>
         <div class="chat-message">
           <strong *ngIf="msg.nickname != null">{{msg.nickname}}</strong>
-          <strong *ngIf="msg.nickname == null">{{name}}</strong>
-          <span style="float: right;">{{msg.date}} </span>
-          <br />
-          <p class= "text" style="word-wrap:break-word;" *ngIf="msg.nickname != null"> {{msg.message}}  </p>
-          <p class= "text" style="word-wrap:break-word;" *ngIf="msg.nickname == null"> {{msg}}  </p>
 
+          <span style="float: right;" class= "time">{{msg.date}} </span>
           <br />
 
+          <p  style="word-wrap:break-word;" *ngIf="msg.nickname != null"> {{msg.message}}  </p>
+          <br />
         </div>
-      </div>
+    </div>
 
     </div>
+
+
 
     <div target="_self chatlogs">
       <div class="chat-form">
