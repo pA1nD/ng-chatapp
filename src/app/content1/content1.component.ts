@@ -50,8 +50,9 @@ export class Content1Component implements OnInit, AfterViewChecked {
   ngOnInit(): void {
     // Wir zeigen ein Prompt (pop-up) und weisen den Input an `name` zu
     // Neu: Bis er einen Namen eingibt.
-    this.name = 'Björn'
-    this.email = 'bs@websites-smart.de'
+    // this.name = 'Björn'
+    // this.email = 'bs@websites-smart.de'
+
     while (this.name == '' || this.name == null) {
       this.name = prompt('Hallo! Wie heisst du?')
     }
@@ -74,7 +75,8 @@ export class Content1Component implements OnInit, AfterViewChecked {
               e.dateString = new Date(e.date).toLocaleString()
               e.img =
                 'https://www.gravatar.com/avatar/' +
-                Md5.hashStr(e.email.trim().toLowerCase())
+                Md5.hashStr(e.email.trim().toLowerCase()) +
+                '?d=robohash'
 
               let s = e.sentiment.score
 
