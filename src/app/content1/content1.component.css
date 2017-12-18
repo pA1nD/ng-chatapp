@@ -1,40 +1,38 @@
-*{
-  margin:0;
-  padding:0;
+* {
+  margin: 0;
+  padding: 0;
   font-family: tahoma, sans-serif;
   box-sizing: border-box;
 }
 
 body {
-  background-color: #E6E6E6
+  background-color: #e6e6e6;
 }
 
-
-.chatbox{
-max-width: 50%;
-min-width: 360px;
-height: 600px;
-background: #0B243B;
-padding:5px;
-margin: 5px auto;
-box-shadow: 0 3px #ccc;
+.chatbox {
+  max-width: 50%;
+  min-width: 360px;
+  height: 600px;
+  background: #0b243b;
+  padding: 2px;
+  margin: 15px auto;
+  /* box-shadow: 0 3px #ccc; */
 }
 
-.chatlogs{
-   padding: 10px;
-   width: 100%;
-   height: 500px;
-   background: #fff;
-   overflow-x: hidden;
-   overflow-y: scroll;
-
+.chatlogs {
+  padding: 10px;
+  width: 100%;
+  height: 450px;
+  background: #fff;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .chatlogs:: -werbkit-scrollbar {
   width: 5px;
 }
-.chatlogs:: -werbkit-scrollbar-thumb{
+.chatlogs:: -werbkit-scrollbar-thumb {
   border-radius: 5px;
-  background: rgba(0,0,0,.1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .chat {
@@ -42,8 +40,6 @@ box-shadow: 0 3px #ccc;
   flex-flow: row wrap;
   align-items: flex-start;
   margin-bottom: 10px;
-
-
 }
 
 .chat .user-photo {
@@ -53,69 +49,61 @@ box-shadow: 0 3px #ccc;
   border-radius: 50%;
 }
 
-.chat .chat-message{
+.chat .chat-message {
   width: 75%;
   padding: 10px;
-   margin: 5px 10px 0;
-   border-radius: 10px;
-   color: black;
+  margin: 5px 10px 0;
+  border-radius: 10px;
+  color: black;
 
-   font:14px arial;
+  font: 14px arial;
 }
 
-.chat .chat-message .time{
+.chat .chat-message .time {
   color: grey;
   font-size: 70%;
   text-align: right;
-
 }
 
-
-
-.friend .chat-message{
-     background: #E6EAEB;
-     order: 1;
-
+.friend .chat-message {
+  background: #e6eaebab;
+  order: 1;
 }
 
-
-.welcome .chat-message{
-      background: #A7F0F9;
-      order: -1;
+.welcome .chat-message {
+  background: #a7f0f9ab;
+  order: -1;
 }
 
-.self .chat-message{
-      background: #A7F0F9;
-      order: -1;
+.self .chat-message {
+  background: #cac27fab;
+  order: -1;
 }
 
-
-.chat-form{
-  margin-top: 10px;
+.chat-form {
+  margin: 15px;
   display: flex;
   align-items: flex-start;
-
 }
-.chat-form textarea{
+.chat-form textarea {
   width: 90%;
-  height: 40px;
-  border: 2px solid #070B19;
+  height: 68px;
+  border: 2px solid #070b19;
   border-radius: 3px;
   resize: none;
   padding: 10px;
   background: #071918;
-  font-size: 14px ;
-  color: #F7F8E0;
+  font-size: 14px;
+  color: #f7f8e0;
   font-style: normal;
 }
 
-.chat-form textarea: focus{
-  background: #070B19;
-
+.chat-form: focus {
+  background: #070b19;
 }
 
-.chat-form button{
-  background: #DEDDDD;
+.chat-form button {
+  background: #dedddd;
   padding: 1px 5px;
   font-size: 14px;
   border: none;
@@ -124,12 +112,200 @@ box-shadow: 0 3px #ccc;
   box-shadow: 4px 3px 0 #000;
   cursor: pointer;
 
-  -webkit-transition: background .2s ease;
-  -moz-transition: background .2s ease;
-  -o-transition:background .2s ease;
+  -webkit-transition: background 0.2s ease;
+  -moz-transition: background 0.2s ease;
+  -o-transition: background 0.2s ease;
 }
 
 .chat-form button:hover {
-  background: #A09F9F;
-  color: #ffffff;
+  /* background: #a09f9f; */
+  color: #026fff;
+}
+
+/* START TACHYONS */
+/* CHECK: http://tachyons.io/components/buttons/pill-grow/index.html */
+/* Björn, Dec. 2017 */
+
+.ba {
+  border-style: solid;
+  border-width: 1px;
+}
+
+.br-pill {
+  border-radius: 9999px;
+}
+
+.bw1 {
+  border-width: 0.125rem;
+}
+
+.bw2 {
+  border-width: 0.25rem;
+}
+
+.dib {
+  display: inline-block;
+}
+
+.fw6 {
+  font-weight: 600;
+}
+
+.tracked {
+  letter-spacing: 0.1em;
+}
+
+.black {
+  color: #000;
+}
+
+.near-black {
+  color: #111;
+}
+
+.dark-gray {
+  color: #333;
+}
+
+.mid-gray {
+  color: #555;
+}
+
+.white {
+  color: #fff;
+}
+
+.purple {
+  color: #5e2ca5;
+}
+
+.light-purple {
+  color: #a463f2;
+}
+
+.dark-pink {
+  color: #d5008f;
+}
+
+.hot-pink {
+  color: #ff41b4;
+}
+
+.dark-green {
+  color: #137752;
+}
+
+.navy {
+  color: #001b44;
+}
+
+.dark-blue {
+  color: #00449e;
+}
+
+.bg-black {
+  background-color: #000;
+}
+
+.bg-near-black {
+  background-color: #111;
+}
+
+.bg-dark-gray {
+  background-color: #333;
+}
+
+.bg-mid-gray {
+  background-color: #555;
+}
+
+.bg-purple {
+  background-color: #5e2ca5;
+}
+
+.bg-light-purple {
+  background-color: #a463f2;
+}
+
+.bg-dark-pink {
+  background-color: #d5008f;
+}
+
+.bg-hot-pink {
+  background-color: #ff41b4;
+}
+
+.bg-dark-green {
+  background-color: #137752;
+}
+
+.bg-navy {
+  background-color: #001b44;
+}
+
+.bg-dark-blue {
+  background-color: #00449e;
+}
+
+.pv2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.ph3 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.mb2 {
+  margin-bottom: 0.5rem;
+}
+
+.mb4 {
+  margin-bottom: 2rem;
+}
+
+.mt4 {
+  margin-top: 2rem;
+}
+
+.no-underline {
+  text-decoration: none;
+}
+
+.ttu {
+  text-transform: uppercase;
+}
+
+.f6 {
+  font-size: 0.875rem;
+}
+
+.grow {
+  -moz-osx-font-smoothing: grayscale;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  transition: transform 0.25s ease-out;
+}
+
+.grow:hover,
+.grow:focus {
+  transform: scale(1.05);
+}
+
+.grow:active {
+  transform: scale(0.9);
+}
+
+/* MSG BTN CUSTOM STYLES */
+
+.chat-form button.msg-btn {
+  border-style: solid;
+  border-width: 2px;
+  box-shadow: none;
+  background-color: #ffffffbf;
+  border-radius: 10px;
+  padding: 5px 10px;
+  margin: auto;
+  margin-left: 10px;
 }
